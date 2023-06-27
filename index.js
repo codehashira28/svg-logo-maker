@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const prompt = inquirer.createPromptModule();
-const Shapes = require('./lib/shapes');
+const logo = require('./lib/generateSVG');
 
 // GIVEN a command-line application that accepts user input
 // WHEN I am prompted for text
@@ -44,16 +44,9 @@ function writeToFile(fileName, data) {
     fs.writeFileSync(fileName, data);
 }
 
-
-
-
 function init() {
     prompt(questions).then((data) => {
-        const newShape = data.shape;
-        const svgShape = new Shapes[newShape]();
-        svgShape.setColor(data.shapeColor);
-        writeToFile('./examples/test.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgShape.render()}</svg>`);
-
+        writeToFile('./examples/test.svg', logo(data));
     })
 }
 
