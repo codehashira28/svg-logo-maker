@@ -46,7 +46,11 @@ function writeToFile(fileName, data) {
 
 function init() {
     prompt(questions).then((data) => {
+        if(data.text.length > 3) {
+            throw new Error('too many characters');
+        }
         writeToFile('./examples/test.svg', logo(data));
+        console.log("Generated logo.svg");
     })
 }
 
