@@ -49,7 +49,7 @@ function init() {
         if(data.text.length > 3) {
             throw new Error('too many characters');
         }
-        writeToFile('./examples/test.svg', logo(data));
+        writeToFile('./examples/logo.svg', logo(data));
         console.log("Generated logo.svg");
     })
 }
