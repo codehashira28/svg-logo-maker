@@ -24,7 +24,7 @@ const questions = [
         name: 'text'
     },
     {
-        message: 'Enter text color: (color keyword or hexadecimal number',
+        message: 'Enter text color: (color keyword or hexadecimal number)',
         name: 'textColor'
     },
     {
@@ -45,12 +45,14 @@ function writeToFile(fileName, data) {
 }
 
 
+
+
 function init() {
     prompt(questions).then((data) => {
         const newShape = data.shape;
         const svgShape = new Shapes[newShape]();
         svgShape.setColor(data.shapeColor);
-        writeToFile('./examples/test.svg', `<svg width="300" height="200">${svgShape.render()}</svg>`);
+        writeToFile('./examples/test.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgShape.render()}</svg>`);
 
     })
 }
