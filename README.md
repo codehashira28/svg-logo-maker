@@ -12,7 +12,7 @@ N/A
 
 In order to run the application, the user must run the command 'node index.js' in the command-line prompt. Once done, the user will be prompted with a series of questions that pertains to the information needed for the SVG file. The prompts will allow the user to choose an SVG shape (triangle, square, or circle), shape color, text to go inside the shape, and text color. When the user finishes answering the questions, the application will generate a logo.svg file that can be opened in the browser and viewed.
 
-[Demo]
+[Demo](https://drive.google.com/file/d/1MgVoU_xjoC7yfa5kxZhRZwem9nk_pU-K/view)
 
 ## Credits
 
