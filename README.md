@@ -19,7 +19,9 @@ In order to run the application, the user must run the command 'node index.js' i
 Sources that helped with generating SVG code:
 
 [W3Schools](https://www.w3schools.com/graphics/svg_intro.asp)
+
 [Text in SVG](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts)
+
 [Text in SVG](https://www.w3schools.com/graphics/svg_text.asp)
 
 Googled how to get SVG to display properly in web browser. Had to include attribute "xmlns="http://www.w3.org/2000/svg" in svg tag.
